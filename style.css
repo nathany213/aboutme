@@ -1,0 +1,41 @@
+/*--------------------------------------- main ---------------------------------------*/
+body {
+    color: white;
+    font-family: "arial";
+    background-color: transparent;
+    background-image: url('images/spaceBg.webp');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    text-align: center;
+}
+
+a { /*hyperlinks*/
+    color: rgb(85, 133, 156);
+}
+
+/*--------------------------------------- misc ---------------------------------------*/
+header {
+    position: fixed;
+    backdrop-filter: blur(8px);
+    display: flex;
+
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+
+div {
+    border-radius: 5%;
+}
+/*--------------------------------------- reusables ---------------------------------------*/
+
+ul {
+    list-style-type: none;
+}
