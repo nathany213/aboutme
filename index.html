@@ -1,53 +1,118 @@
+<!doctype html>
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h2>About me :D</h2>
+    <header id="top">
+        <h2>My Website :D</h2>
         <nav>
             <ul>
-                <li><a href="#intro">test</a></li>
-                <li><a href="#hobbies">test</a></li>
-                <li><a href="#projects">test</a></li>
-                <li><a href="#achievements">test</a></li>
-                <li><a href="#trivia">test</a></li>
+                <li><a title="jump!" href="#intro" >Intro</a></li>
+                <li><a title="jump!" href="#hobbies">Hobbies</a></li>
+                <li><a title="jump!" href="#projects">Projects</a></li>
+                <li><a title="jump!" href="#achievements">Achievements</a></li>
+                <li><a title="jump!" href="#trivia">Trivia</a></li>
+                <li><a title="jump!" href="#contact">Contact me</a></li>
             </ul>
         </nav>
     </header>
-    <hr>
 
-
-    <main>
-        <div id="#intro">
-            <h3>Intro</h3>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
-            <p>a</p>
+    <div id="background">
+        <div id="sky"></div>
+        <div id="ocean"></div>
+        <div id="moon"></div>
+        <div>
+            <div id="star0" class="stars" style="animation-delay:  0.0s; bottom: 80.0%; left: 35.00%;"></div>
+            <div id="star1" class="stars" style="animation-delay: -1.0s; bottom: 77.5%; left: 75.0%;"></div>
+            <div id="star2" class="stars" style="animation-delay: -1.5s; bottom: 75.0%; left: 55.0%;"></div>
+            <div id="star3" class="stars" style="animation-delay: -0.5s; bottom: 72.5%; left: 10.0%;"></div>
+            <div id="star4" class="stars" style="animation-delay: -3.0s; bottom: 70.0%; left: 35.0%;"></div>
+            <div id="star5" class="stars" style="animation-delay: -2.0s; bottom: 67.5%; left: 60.0%;"></div>
+            <div id="star6" class="stars" style="animation-delay: -2.5s; bottom: 65.0%; left: 90.0%;"></div>
+            <div id="star8" class="stars" style="animation-delay: -3.5s; bottom: 62.5%; left: 20.0%;"></div>
         </div>
-        <div id="#hobbies">
+        <div>
+            <div id="wave0" class="waves" style="animation-delay:  0.0s; top: 57.5%; width: 80px;"></div>
+            <div id="wave1" class="waves" style="animation-delay: -1.0s; top: 60.0%; width: 55px;"></div>
+            <div id="wave2" class="waves" style="animation-delay: -1.5s; top: 62.5%; width: 65px;"></div>
+            <div id="wave3" class="waves" style="animation-delay: -0.5s; top: 65.0%; width: 60px;"></div>
+            <div id="wave4" class="waves" style="animation-delay: -3.0s; top: 68.0%; width: 75px;"></div>
+            <div id="wave5" class="waves" style="animation-delay: -2.0s; top: 71.5%; width: 50px;"></div>
+            <div id="wave6" class="waves" style="animation-delay: -2.5s; top: 75.5%; width: 70px;"></div>
+            <div id="wave8" class="waves" style="animation-delay: -3.5s; top: 80.0%; width: 40px;"></div>
+        </div>
+    </div>
+    <main><!--
+        <div id="intro">
+            <h3>About me</h3>
+            <p>Hi, i'm Nathan!</p>
+        </div>
+        <div id="hobbies">
             <h3>Hobbies</h3>
             <ul>
-                <li>Coding: I know some python, a bit of c# and HTML, CSS and JS.</li>
-                <li>Instruments: I play piano and the clarinet</li>
-                <li>Gaming: HSR, florr.io and minecraft</li>
-                <li>Sports: (kinda suck at everything except) badminton</li>
+                <li>playing the piano and clarinet</li>
+                <li>coding (i know a bit of js, html, css and python)</li>
+                <li>I occasionally play some florr.io / portal / hsr / mc</li>
             </ul>
         </div>
-        <div id="#projects">
+        <div id="projects">
             <h3>Projects</h3>
+            <p>I'm coding a productivity / task tracker app </p>
+        </div>
+        <div id="achievements">
+            <h3>Achievements</h3>
             <p></p>
         </div>
-        <div id="#achievements">
-            <h3>achievements</h3>
-            <p></p>
-        </div>
-        <div id="#trivia">
+        <div id="trivia">
             <h3>Trivia</h3>
-            <p></p>
+            <ul>
+                <li>- i know how to solve a rubik's cube</li>
+                <li>- i like boba</li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h3>Contact Me!</h3>
+            <ul>
+                <li>Gmail: nathan123yang@gmail.com</li>
+                <li>Discord user: nathany100_33893</li>
+            </ul>
+        </div>
+        <div id="window">
+            <h2>Admire the background:</h2>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>-->
+    </main>
+
+    <header id="bottom">
+        <audio id="player"></audio> <!--HERE-->
+        <div id="musicInfo">
+            <div id="musicName"></div>
+            <div id="musicArtist"></div>
         </div>
 
-    </main>
-</body>
+        <div id="musicControls">
+            
+            <div id="sliderHbox">
+                <input type="range" id="volumeSlider" min="0" max="100" value="100">
+            </div>
+            <div id="mainControls">
+                <div id="buttons">
+                    <button onclick="prevSong()">⏮</button>
+                    <button id="pausePlay">| |</button> 
+                    <button onclick="nextSong()">⏭</button>
+                </div>
+                <div id="progress">
+                    <p id="timeIn"><small></small></p>
+                    <input type="range" id="progressBar" min="0" max="100" value="0">
+                    <p id="timeLeft"><small></small></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>>

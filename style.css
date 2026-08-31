@@ -1,41 +1,241 @@
 /*--------------------------------------- main ---------------------------------------*/
 body {
-    color: white;
+    color: rgb(255, 255, 255);
+    
     font-family: "arial";
     background-color: transparent;
-    background-image: url('images/spaceBg.webp');
     background-size: cover;
     background-attachment: fixed;
 }
 
+html { 
+    scroll-behavior: smooth;
+}
+
 main {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 a { /*hyperlinks*/
-    color: rgb(85, 133, 156);
+    color: rgb(114, 198, 237);
 }
 
-/*--------------------------------------- misc ---------------------------------------*/
-header {
-    position: fixed;
-    backdrop-filter: blur(8px);
+main div {
+    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+    z-index: 999;
+    backdrop-filter: blur(3px);
+    border: 5px solid rgba(123, 181, 199, 0.132);
+    border-radius: 20px;
+    scroll-margin-top: 100px;
+    text-align: center;
+    /*basically just how much the jump scroll thing offsets by
+    100px so that the header doesnt cover what i scroll jumped to*/
+}
+
+#window {
+    z-index: 999;
+    backdrop-filter: none;
+}
+
+
+/*--------------------------------------- headers ---------------------------------------*/
+#top {
+    z-index: 1000;
+    position: sticky; 
+    /*does the thing where it scrolls 
+    with the page until it hits the top
+    and then stays fixed*/
+
+    backdrop-filter: blur(10px);
     display: flex;
-
+    gap: 50px;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
 }
-
 header ul {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 15px;
 }
 
 
-div {
-    border-radius: 5%;
+
+/*--------------------------------------- bgm ---------------------------------------*/
+
+#bottom {
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+    height: 12.5%;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
 }
+
+#musicInfo {
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 30%;
+}
+
+#musicControls {
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+#mainControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+
+#progress {
+    width: 120%;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+#progressBar {
+    width: 65%;
+}
+#duration {
+    margin: 0;
+}
+
+#sliderHbox {
+    display: flex;
+    align-items: flex-end;
+    height: 70px;
+    bottom: 0;
+}
+#volumeSlider {
+    margin: 0;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    transition: 0.5s ease-in-out;
+    height: 35px;
+}
+#sliderHbox:hover input[type="range"]{
+    height: 70px;
+}
+/*--------------------------------------- bg ---------------------------------------*/
+#sky {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 55%;    
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(5, 39, 58), rgb(5, 39, 58), rgb(21, 62, 86), rgb(29, 77, 104), rgb(80, 123, 148));
+}
+
+.stars {
+    z-index: 0;
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    transform: translateX(-50%);
+    background-color: #fdfdfd;
+    border-radius: 70%;
+    animation-name: stars;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes stars {
+    0%, 100% {
+    box-shadow: 
+        0 0 5px 2.5px rgb(95, 133, 146, 0.05),
+        0 0 5px 5px rgba(250, 244, 128, 0.025);
+    }
+    50% {
+    box-shadow: 
+        0 0 5px 5px rgb(95, 133, 146, 0.1),
+        0 0 5px 10px rgba(250, 244, 128, 0.05);
+    }
+}
+
+
+#ocean {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 45%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgb(75, 102, 118), rgba(32, 48, 57, 0.85), rgb(20, 47, 61), rgb(9, 29, 42), rgb(2, 18, 39));
+    box-shadow: 0 0 5px 10px rgb(95, 133, 146, 0.4),
+}
+
+#moon {
+    z-index: 0;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 42.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d9dec6;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 5px 10px rgb(95, 133, 146, 0.4),
+        0 0 5px 10px rgba(250, 244, 128, 0.1),
+        0 0 5px 75px rgba(242, 234, 84, 0.025),
+        0 0 5px 150px rgba(251, 238, 1, 0.015);
+    /*it goes horizontal + vertical offset,
+    then blur, then spread of the shadow*/ 
+}
+
+.waves {
+    z-index: 0;
+    position: fixed;
+    height: 2px;
+    background-color: azure;
+    filter: blur(1px);
+    left: 50%;
+    animation-name: waves;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes waves {
+    0% {transform: translateX(-75%)}
+    50% {transform: translateX(-25%)}
+    100% {transform: translateX(-75%)}
+}
+
+
 /*--------------------------------------- reusables ---------------------------------------*/
 
 ul {
+    padding-left: 0;
     list-style-type: none;
+}
+
+button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgb(96, 122, 122);
+    background-color: rgb(137, 171, 170);
+    transition: background-color 0.175s ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgb(177, 236, 234);
 }
