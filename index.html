@@ -9,10 +9,9 @@
         <h2>My Website :D</h2>
         <nav>
             <ul>
-                <li><a title="jump!" href="#intro" >Intro</a></li>
+                <li><a title="jump!" href="#intro" >About</a></li>
                 <li><a title="jump!" href="#hobbies">Hobbies</a></li>
-                <li><a title="jump!" href="#projects">Projects</a></li>
-                <li><a title="jump!" href="#achievements">Achievements</a></li>
+                <li><a title="jump!" href="#projects">Projects</a></li> 
                 <li><a title="jump!" href="#trivia">Trivia</a></li>
                 <li><a title="jump!" href="#contact">Contact me</a></li>
             </ul>
@@ -44,36 +43,59 @@
             <div id="wave8" class="waves" style="animation-delay: -3.5s; top: 80.0%; width: 40px;"></div>
         </div>
     </div>
-    <main><!--
+    <main>
         <div id="intro">
-            <h3>About me</h3>
-            <p>Hi, i'm Nathan!</p>
+            <h1>Intro</h1>
+            <p>
+                Hi, i'm Nathan! I'm a teen living in the UK.
+            </p>
+            <p>
+                I am still learning how to code,
+                and this is my 1st "formal" website, <br>
+                so things may be buggy or may look weird <br>
+                (feedback would be appreciated!)
+            </p>
+            <p>
+
+            </p>
         </div>
+            
         <div id="hobbies">
-            <h3>Hobbies</h3>
+            <h1>Hobbies</h1>
             <ul>
+                <li>coding (i know some js, html, css and python)<br>
+                    as well as some onshape/3d modelling </li>
+                <li>I occasionally play some florr.io / Portal / HSR / MC</li>
+                <li>listening to music from creators like C418, Azali, Toby Fox</li>
                 <li>playing the piano and clarinet</li>
-                <li>coding (i know a bit of js, html, css and python)</li>
-                <li>I occasionally play some florr.io / portal / hsr / mc</li>
+                <li>Sleeping/procrastinating</li>
             </ul>
         </div>
         <div id="projects">
-            <h3>Projects</h3>
-            <p>I'm coding a productivity / task tracker app </p>
-        </div>
-        <div id="achievements">
-            <h3>Achievements</h3>
-            <p></p>
+            <h1>Projects</h1>
+            <ul>
+                <li>I'm currently coding a productivity / task tracker app</li>
+                <li>I built this about me page (it was very fun to make)</li>
+                <li>participated in the suburani build-it challenge
+                    (basically just a 3d modelling competition)<br>
+                    and got runner-up. You can see the model
+                    <a href="https://sketchfab.com/3d-models/arch-of-hadrian-6aefdee8f0b346278547a7dfff9c10d6">here</a> 
+                </li>
+                
+                <li></li>
+            </ul>
         </div>
         <div id="trivia">
-            <h3>Trivia</h3>
+            <h1>Trivia</h1>
             <ul>
                 <li>- i know how to solve a rubik's cube</li>
-                <li>- i like boba</li>
+                <li>- boba is probably my favourite drink</li>
+                <li>- i REALLY suck at chess</li>
+                <li>- i like building lego sets</li>
             </ul>
         </div>
         <div id="contact">
-            <h3>Contact Me!</h3>
+            <h1>Contact Me!</h1>
             <ul>
                 <li>Gmail: nathan123yang@gmail.com</li>
                 <li>Discord user: nathany100_33893</li>
@@ -81,14 +103,12 @@
         </div>
         <div id="window">
             <h2>Admire the background:</h2>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br>
-        </div>-->
+            <div id="spacing"></div>
+        </div>
     </main>
 
     <header id="bottom">
-        <audio id="player"></audio> <!--HERE-->
+        <audio id="player"></audio> <!--HERE--> 
         <div id="musicInfo">
             <div id="musicName"></div>
             <div id="musicArtist"></div>
@@ -105,6 +125,7 @@
                     <button id="pausePlay">| |</button> 
                     <button onclick="nextSong()">⏭</button>
                 </div>
+                <p id="duration"></p>
                 <div id="progress">
                     <p id="timeIn"><small></small></p>
                     <input type="range" id="progressBar" min="0" max="100" value="0">

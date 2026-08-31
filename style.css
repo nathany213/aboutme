@@ -13,14 +13,17 @@ html {
 }
 
 main {
-    text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 10px;
 }
 
-a { /*hyperlinks*/
-    color: rgb(114, 198, 237);
+main p {
+    font-size: 17px;
+}
+main li {
+    font-size: 17px;
 }
 
 main div {
@@ -31,12 +34,23 @@ main div {
     border-radius: 20px;
     scroll-margin-top: 100px;
     text-align: center;
+    width: 95%
     /*basically just how much the jump scroll thing offsets by
     100px so that the header doesnt cover what i scroll jumped to*/
 }
 
+a { /*hyperlinks*/
+    color: rgb(114, 198, 237);
+}
+
+
 #window {
     z-index: 999;
+    backdrop-filter: none;
+}
+#spacing {
+    height: 95vh; /*95% of screen heihgt*/
+    border: none;
     backdrop-filter: none;
 }
 
@@ -225,6 +239,9 @@ header ul {
 ul {
     padding-left: 0;
     list-style-type: none;
+}
+li {
+    margin-top: 5px;
 }
 
 button {
