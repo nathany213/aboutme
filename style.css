@@ -91,6 +91,9 @@ img {
 
 /*--------------------------------------- headers ---------------------------------------*/
 #top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1000;
     position: sticky; 
     /*does the thing where it scrolls 
@@ -98,7 +101,6 @@ img {
     and then stays fixed*/
 
     backdrop-filter: blur(10px);
-    display: flex;
     gap: 50px;
     width: 100%;
     top: 0;
