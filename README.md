@@ -11,5 +11,7 @@ This website is divided into 3 main parts: the content, background and player.
  - you can view it clearly through the "window" i put at the bottom
 # player:
  - theres an interactive bgm player with some nice music on it :D
- - 
-(probably unfinished readme)
+# credits:
+ - music from C418, Lena Raine, Instupendo, Toby Fox, LSPLASH, Steelman, Hisohkah and WMD
+# usage of ai:
+ - Ai use rarely for troubleshooting, and also to tell me how to upload a project to github and add large folders into this repo.
